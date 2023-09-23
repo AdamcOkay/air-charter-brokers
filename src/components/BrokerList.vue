@@ -4,6 +4,10 @@
       <v-col cols="12" md="6">
         <h1>Broker list</h1>
       </v-col>
+      <v-col cols="12" md="6">
+        <v-select label="Select a country to filter" :items="brokerCountries" :model-value="filterValue"
+          @update:model-value="onSelectChange"></v-select>
+      </v-col>
     </v-row>
     <v-row>
       <v-col v-for="broker in list" :key="broker.id" cols="12" md="4">
@@ -19,6 +23,7 @@
 </template>
 
 <script setup lang="ts">
+import { ref } from 'vue';
 import { useStore, Broker } from '@/plugins/store';
 import { useAxios } from '@/composables/useAxios';
 import BrokerListItem from './BrokerListItem.vue';
@@ -28,5 +33,13 @@ const { data, error } = await useAxios<{ list: Broker[] }>('brokers.json');
 
 store.commit('setList', data.value ? data.value.list : []);
 
-let list = store.state.brokerList;
+const list = ref(store.state.brokerList);
+const filterValue = ref('All');
+const brokerCountries = store.getters.countries;
+
+
+const onSelectChange = (country: string) => {
+  filterValue.value = country;
+  list.value = store.getters.filteredListByCountry(country);
+}
 </script>

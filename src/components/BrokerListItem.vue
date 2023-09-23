@@ -13,7 +13,6 @@
                 :href="contact" 
                 target="_blank"
                 class="broker-card__link"
-                size="small"
                 color="#00ADB5"
             >
                 Contact

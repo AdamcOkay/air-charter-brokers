@@ -27,7 +27,14 @@ export const store = createStore<State>({
     },
   },
   getters: {
-    filterListByCountry(state, country: string) {
+    countries(state) {
+      return ['All', ...Array.from(new Set(state.brokerList.map((broker) => broker.country)))];
+    },
+    filteredListByCountry: (state) => (country: string) => {
+      if (country === 'All') {
+        return state.brokerList;
+      }
+
       return state.brokerList.filter((broker) => broker.country === country);
     },
   },
