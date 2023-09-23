@@ -1,5 +1,11 @@
 <template>
-  <div v-if="list">
+  <div v-if="error">
+    <v-row class="justify-center">
+      <v-alert type="error" title="An error has occured" :text="error.message"></v-alert>
+    </v-row>
+  </div>
+
+  <div v-if="list && !error">
     <v-row>
       <v-col cols="12" md="6">
         <h1>Broker list</h1>
@@ -15,10 +21,6 @@
           :contact="broker.contact" />
       </v-col>
     </v-row>
-  </div>
-
-  <div v-if="error">
-    {{ error }}
   </div>
 </template>
 
