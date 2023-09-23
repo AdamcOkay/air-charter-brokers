@@ -1,11 +1,15 @@
 <template>
   <v-app>
     <v-main>
-      <BrokerList />
+      <Suspense>
+        <BrokerList />
+
+        <template #fallback>Loading</template>
+      </Suspense>
     </v-main>
   </v-app>
 </template>
 
 <script setup lang="ts">
-  import BrokerList from '@/components/BrokerList.vue'
+import BrokerList from '@/components/BrokerList.vue'
 </script>

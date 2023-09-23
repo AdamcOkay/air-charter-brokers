@@ -1,0 +1,53 @@
+{
+    "list": [
+        {
+            "id": 1,
+            "name": "AB Corporate Aviation",
+            "logo": "abcorporate.svg",
+            "country": "France",
+            "contact": "https://www.abcorporate-aviation.com/contact-us"
+        },
+        {
+            "id": 2,
+            "name": "Air Charter Service USA",
+            "logo": "air-charter-service.svg",
+            "country": "USA",
+            "contact": "https://www.aircharterserviceusa.com/contact"
+        },
+        {
+            "id": 3,
+            "name": "Asian Sky Group",
+            "logo": "asg.svg",
+            "country": "Hong Kong",
+            "contact": "https://www.asianskygroup.com/contact-us/"
+        },
+        {
+            "id": 4,
+            "name": "Fly Charters",
+            "logo": "fly-charters.svg",
+            "country": "United Arab Emirates",
+            "contact": "https://www.flycharters.aero/contact-us"
+        },
+        {
+            "id": 5,
+            "name": "FlyXo",
+            "logo": "xo.svg",
+            "country": "USA",
+            "contact": "https://flyxo.com/contact/"
+        },
+        {
+            "id": 6,
+            "name": "Private Fly",
+            "logo": "private-fly.svg",
+            "country": "United Kingdom",
+            "contact": "https://www.privatefly.com/contactUs/contact.html"
+        },
+        {
+            "id": 7,
+            "name": "Mercury Jets",
+            "logo": "mercury.svg",
+            "country": "USA",
+            "contact": "https://www.mercuryjets.com/contact-us/"
+        }
+    ]
+}
