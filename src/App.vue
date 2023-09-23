@@ -1,11 +1,19 @@
 <template>
   <v-app>
     <v-main>
-      <Suspense>
-        <BrokerList />
+      <v-container class="fill-height">
+        <v-responsive class="align-center fill-height">
+          <Suspense>
+            <v-container>
+              <BrokerList />
+            </v-container>
 
-        <template #fallback>Loading</template>
-      </Suspense>
+            <template #fallback>
+              <h1 class="text-center">Loading...</h1>
+            </template>
+          </Suspense>
+        </v-responsive>
+      </v-container>
     </v-main>
   </v-app>
 </template>
